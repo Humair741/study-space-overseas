@@ -1,0 +1,16 @@
+# Replace the MongoDB service with PostgreSQL
+postgres:
+  image: postgres:latest
+  ports:
+    - "5432:5432"
+  environment:
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: postgres
+    POSTGRES_DB: studyspace
+  volumes:
+    - postgres_data:/var/lib/postgresql/data
+
+# And update the volumes section
+volumes:
+  postgres_data:
+  

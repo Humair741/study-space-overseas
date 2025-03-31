@@ -1,0 +1,226 @@
+/* src/components/layout/Header/Header.css */
+.header {
+    width: 100%;
+    color: #151515;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+  }
+  
+  .header-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Logo styles */
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #151515;
+  }
+  
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 0.5rem;
+  }
+  
+  .logo-overseas {
+    background-color: #facc15; /* Yellow-400 */
+    color: #151515;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+  
+  /* Desktop navigation */
+  .desktop-nav {
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    .desktop-nav {
+      display: block;
+    }
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links a {
+    color: #151515;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    padding: 0.5rem 0;
+  }
+  
+  .nav-links a:hover {
+    color: #facc15; /* Yellow-400 */
+  }
+  
+  /* Auth buttons */
+  .auth-buttons {
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    .auth-buttons {
+      display: flex;
+      gap: 0.75rem;
+    }
+  }
+  
+  .login-btn {
+    background-color: transparent;
+    color: #151515;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    border: 1px solid #151515;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .login-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .signup-btn {
+    background-color: #facc15; /* Yellow-400 */
+    color: #151515;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .signup-btn:hover {
+    background-color: #fcd34d; /* Yellow-300 */
+  }
+  
+  /* Mobile menu button */
+  .mobile-menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+  }
+  
+  @media (min-width: 768px) {
+    .mobile-menu-btn {
+      display: none;
+    }
+  }
+  
+  .menu-icon {
+    display: block;
+    position: relative;
+    width: 24px;
+    height: 2px;
+    background-color: #151515;
+    transition: all 0.3s;
+  }
+  
+  .menu-icon::before,
+  .menu-icon::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #151515;
+    transition: all 0.3s;
+  }
+  
+  .menu-icon::before {
+    transform: translateY(-8px);
+  }
+  
+  .menu-icon::after {
+    transform: translateY(8px);
+  }
+  
+  .menu-icon.open {
+    background-color: transparent;
+  }
+  
+  .menu-icon.open::before {
+    transform: rotate(45deg);
+  }
+  
+  .menu-icon.open::after {
+    transform: rotate(-45deg);
+  }
+  
+  /* Mobile navigation */
+  .mobile-nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #f9fafb; /* Off-white */
+    padding: 1.5rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mobile-nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+  }
+  
+  .mobile-nav-links li {
+    margin-bottom: 1rem;
+  }
+  
+  .mobile-nav-links a {
+    color: #151515;
+    text-decoration: none;
+    font-size: 1.125rem;
+    display: block;
+    padding: 0.5rem 0;
+  }
+  
+  .mobile-auth-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .mobile-auth-buttons button {
+    width: 100%;
+    padding: 0.75rem;
+  }
