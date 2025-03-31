@@ -1,6 +1,6 @@
-// src/App.jsx
 import Header from './components/layout/Header';
 import Hero from './components/features/Hero';
+import FeaturesSection from './components/features/FeaturesSection';
 import './App.css';
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
       <Header />
       <main className="main-content">
         <Hero />
+        <FeaturesSection />
         {/* Other components will be added here */}
       </main>
     </div>
