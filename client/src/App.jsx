@@ -1,14 +1,13 @@
 // src/App.jsx
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/layout/Header';
-import Hero from './components/features/Hero';
-import FeaturesSection from './components/features/FeaturesSection';
-import DestinationsSection from './components/features/DestinationsSection';
-import AIFeaturesSection from './components/features/AIFeaturesSection';
-import TestimonialsSection from './components/features/TestimonialsSection';
-import PartnersSection from './components/features/PartnersSection';
-import FAQSection from './components/features/FAQSection';
-import CTASection from './components/features/CTASection';
 import Footer from './components/layout/Footer';
+import HomePage from './pages/HomePage';
+import DestinationsPage from './pages/DestinationsPage';
+import ProgramsPage from './pages/ProgramsPage';
+import ServicesPage from './pages/ServicesPage';
+import SuccessStoriesPage from './pages/SuccessStoriesPage';
+import ResourcesPage from './pages/ResourcesPage';
 import './App.css';
 
 function App() {
@@ -16,14 +15,14 @@ function App() {
     <div className="App">
       <Header />
       <main className="main-content">
-        <Hero />
-        <FeaturesSection />
-        <DestinationsSection />
-        <AIFeaturesSection />
-        <TestimonialsSection />
-        <PartnersSection />
-        <FAQSection />
-        <CTASection />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/destinations" element={<DestinationsPage />} />
+          <Route path="/programs" element={<ProgramsPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/success-stories" element={<SuccessStoriesPage />} />
+          <Route path="/resources" element={<ResourcesPage />} />
+        </Routes>
       </main>
       <Footer />
     </div>
