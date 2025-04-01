@@ -6,6 +6,7 @@ import DestinationsSection from './components/features/DestinationsSection';
 import AIFeaturesSection from './components/features/AIFeaturesSection';
 import TestimonialsSection from './components/features/TestimonialsSection';
 import CTASection from './components/features/CTASection';
+import Footer from './components/layout/Footer';
 import './App.css';
 
 function App() {
@@ -19,8 +20,8 @@ function App() {
         <AIFeaturesSection />
         <TestimonialsSection />
         <CTASection />
-        {/* Other components will be added here */}
       </main>
+      <Footer />
     </div>
   );
 }
