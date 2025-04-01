@@ -5,6 +5,7 @@ import FeaturesSection from './components/features/FeaturesSection';
 import DestinationsSection from './components/features/DestinationsSection';
 import AIFeaturesSection from './components/features/AIFeaturesSection';
 import TestimonialsSection from './components/features/TestimonialsSection';
+import PartnersSection from './components/features/PartnersSection';
 import FAQSection from './components/features/FAQSection';
 import CTASection from './components/features/CTASection';
 import Footer from './components/layout/Footer';
@@ -20,6 +21,7 @@ function App() {
         <DestinationsSection />
         <AIFeaturesSection />
         <TestimonialsSection />
+        <PartnersSection />
         <FAQSection />
         <CTASection />
       </main>
